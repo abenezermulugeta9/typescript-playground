@@ -15,3 +15,13 @@ const multiply = function (num1: number, num2: number, num3: number = 1): number
     return num1 * num2 * num3;
 }
 console.log(multiply(3, 4));
+
+// generics
+function getItems<T>(items: T[]): T[] {
+    return new Array<T>().concat(items);
+}
+
+let concatNumbers = getItems<number>([1, 2, 3]);
+console.log(concatNumbers);
+let concatStrings = getItems<string>(["a", "b", "c"]);
+console.log(concatStrings);

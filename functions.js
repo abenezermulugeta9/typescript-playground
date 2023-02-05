@@ -14,3 +14,11 @@ const multiply = function (num1, num2, num3 = 1) {
     return num1 * num2 * num3;
 };
 console.log(multiply(3, 4));
+// generics
+function getItems(items) {
+    return new Array().concat(items);
+}
+let concatNumbers = getItems([1, 2, 3]);
+console.log(concatNumbers);
+let concatStrings = getItems(["a", "b", "c"]);
+console.log(concatStrings);
