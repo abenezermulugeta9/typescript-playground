@@ -1,10 +1,27 @@
-class Employee {
+class Person {
+    // you can use '#' or 'private' keyword to decalre 
+    // private variables, using none will make the visibility 
+    // public. There is also a 'protected' visibility
+    protected id!: number;
+    protected name!: string;
+    protected address!: string;
+
+    getNameWithAddress(): string {
+        return `${this.name} lives at ${this.address}`;
+    }
+}
+
+class Employee extends Person {
     id!: number;
     name!: string;
     address!: string;
 
     getNameWithAddress(): string {
-        return `${this.name} stays at ${this.address}`;
+        return `${this.name} works at ${this.address}`;
+    }
+
+    static getAge(): number {
+        return 50;
     }
 }
 
@@ -15,6 +32,9 @@ john.address = 'Highway 5';
 
 console.log(john);
 console.log(john.getNameWithAddress());
+
+// accessing static method
+console.log(Employee.getAge());
 
 class Book {
     isbn: number;

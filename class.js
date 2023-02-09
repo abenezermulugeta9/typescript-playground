@@ -1,7 +1,15 @@
 "use strict";
-class Employee {
+class Person {
     getNameWithAddress() {
-        return `${this.name} stays at ${this.address}`;
+        return `${this.name} lives at ${this.address}`;
+    }
+}
+class Employee extends Person {
+    getNameWithAddress() {
+        return `${this.name} works at ${this.address}`;
+    }
+    static getAge() {
+        return 50;
     }
 }
 let john = new Employee();
@@ -10,6 +18,8 @@ john.name = 'John';
 john.address = 'Highway 5';
 console.log(john);
 console.log(john.getNameWithAddress());
+// accessing static method
+console.log(Employee.getAge());
 class Book {
     constructor(isbn, title, author) {
         this.isbn = isbn;
