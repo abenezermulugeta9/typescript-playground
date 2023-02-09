@@ -2,6 +2,10 @@ class Employee {
     id!: number;
     name!: string;
     address!: string;
+
+    getNameWithAddress(): string {
+        return `${this.name} stays at ${this.address}`;
+    }
 }
 
 let john = new Employee();
@@ -10,6 +14,7 @@ john.name = 'John';
 john.address = 'Highway 5';
 
 console.log(john);
+console.log(john.getNameWithAddress());
 
 class Book {
     isbn: number;
