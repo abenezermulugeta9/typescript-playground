@@ -9,6 +9,15 @@ class Person {
     getNameWithAddress(): string {
         return `${this.name} lives at ${this.address}`;
     }
+
+    // getters and setters 
+    get empId(): number {
+        return this.id;
+    }
+
+    set empId(id: number) {
+        this.id = id;
+    }
 }
 
 class Employee extends Person {
