@@ -3,6 +3,13 @@ class Person {
     getNameWithAddress() {
         return `${this.name} lives at ${this.address}`;
     }
+    // getters and setters 
+    get empId() {
+        return this.id;
+    }
+    set empId(id) {
+        this.id = id;
+    }
 }
 class Employee extends Person {
     getNameWithAddress() {
