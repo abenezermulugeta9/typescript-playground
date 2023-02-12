@@ -7,6 +7,11 @@ export interface User {
 
 let user: User = { name: "John", age: 12, id: 234, email: "john@email.com" };
 
+// object destructuring
+let { name, email }: User = { name: "Bob", age: 17, id: 237, email: "bob@email.com" };
+
+console.log(name);
+
 interface Employees extends User {
     salary: number;
 }
